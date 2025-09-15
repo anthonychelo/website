@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREEMIND - Instructions</title>
+    <style>
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--light-color);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo h1 {
+            font-size: 36px;
+            margin-bottom: 5px;
+            background: linear-gradient(to right, #fff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .instructions {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .instructions h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        
+        .step-number {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-content h3 {
+            margin-bottom: 8px;
+        }
+        
+        .qr-section {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+        
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .url-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            word-break: break-all;
+            font-family: monospace;
+        }
+        
+        .copy-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .chat-demo {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .chat-demo h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 12px 15px;
+            border-radius: 18px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .message.received {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-top-left-radius: 0;
+            align-self: flex-start;
+        }
+        
+        .message.sent {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border-top-right-radius: 0;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+        
+        .credit {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>FREEMIND</h1>
+            <p>Comment utiliser l'application sur votre téléphone</p>
+        </div>
+        
+        <div class="instructions">
+            <h2>Instructions simples</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Ouvrez cette page sur votre ordinateur</h3>
+                    <p>Gardez cette page ouverte sur votre ordinateur pour voir les instructions.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Sur votre téléphone</h3>
+                    <p>Ouvrez votre navigateur (Chrome, Safari, etc.) et tapez l'adresse exacte qui s'affiche ci-dessous dans la barre d'adresse.</p>
+                    <div class="url-box" id="url-display">
+                        Chargement de l'adresse...
+                    </div>
+                    <button class="copy-btn" id="copy-url">Copier l'adresse</button>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Commencez à chatter</h3>
+                    <p>Une fois la page ouverte sur votre téléphone, choisissez un pseudo et commencez à envoyer des messages. Ils apparaîtront en temps réel sur les deux appareils.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="qr-section">
+            <h3>Option alternative: QR Code</h3>
+            <p>Si vous préférez, vous pouvez utiliser une application de scan de QR code sur votre téléphone pour accéder rapidement au site.</p>
+            <div class="qr-placeholder">
+                Ouvrez l'application caméra<br>et scannez l'écran de votre ordinateur
+            </div>
+            <p>Pointez l'appareil photo de votre téléphone vers l'écran de votre ordinateur pour ouvrir le lien.</p>
+        </div>
+        
+        <div class="chat-demo">
+            <h2>À quoi s'attendre</h2>
+            <div class="message received">
+                <div class="message-sender">Utilisateur#ABC123</div>
+                <div class="message-text">Salut ! Comment ça va ?</div>
+            </div>
+            <div class="message sent">
+                <div class="message-sender">Vous</div>
+                <div class="message-text">Super bien ! Content de te parler 😊</div>
+            </div>
+            <div class="message received">
+                <div class="message-sender">Utilisateur#XYZ789</div>
+                <div class="message-text">C'est génial de pouvoir discuter comme ça entre appareils!</div>
+            </div>
+        </div>
+        
+        <div class="credit">
+            <p>by the misunderstood (Anthony Chelo)</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Afficher l'URL actuelle
+            const urlDisplay = document.getElementById('url-display');
+            const currentUrl = window.location.href;
+            urlDisplay.textContent = currentUrl;
+            
+            // Copier l'URL dans le presse-papier
+            document.getElementById('copy-url').addEventListener('click', function() {
+                navigator.clipboard.writeText(currentUrl).then(function() {
+                    alert('Adresse copiée! Collez-la dans le navigateur de votre téléphone.');
+                }).catch(function() {
+                    // Fallback pour les navigateurs qui ne supportent pas clipboard API
+                    const textArea = document.createElement('textarea');
+                    textArea.value = currentUrl;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    alert('Adresse copiée! Collez-la dans le navigateur de votre téléphone.');
+                });
+            });
+            
+            // Simuler le fonctionnement du chat
+            const messages = document.querySelectorAll('.message');
+            let delay = 0;
+            
+            messages.forEach(message => {
+                setTimeout(() => {
+                    message.style.opacity = '1';
+                    message.style.transform = 'translateY(0)';
+                }, delay);
+                delay += 500;
+            });
+        });
+    </script>
+</body>
+</html>
